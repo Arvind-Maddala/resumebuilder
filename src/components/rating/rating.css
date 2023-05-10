@@ -1,0 +1,27 @@
+.rating__username-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.rating__username {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.rating__username--time {
+  font-size: 0.8rem;
+  margin: 1rem 0.5rem;
+}
+.rating__container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.rating__verified {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 1rem;
+}
+.rating__verified p {
+  font-size: 0.9rem;
+}

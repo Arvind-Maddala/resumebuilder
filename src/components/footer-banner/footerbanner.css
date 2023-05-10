@@ -1,0 +1,29 @@
+.footerBanner {
+  position: relative;
+  background: url("../../assets/triangles-400.jpg");
+  background-position: center;
+  height: 400px;
+  margin-top: 2rem;
+}
+
+.footerBanner__title {
+  position: absolute;
+  top: 30%;
+  right: calc(50% - 285px);
+  font-family: "roboto";
+  font-size: 1.35rem;
+  color: #fff;
+}
+.footerBanner__trynow {
+  position: absolute;
+  top: 60%;
+  right: calc(50% - 200px);
+  width: 400px;
+  border-radius: 2rem;
+  padding: 1rem 5.6rem;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3983fa;
+  cursor: pointer;
+}
