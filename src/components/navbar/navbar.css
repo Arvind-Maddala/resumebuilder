@@ -1,0 +1,97 @@
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.menu {
+  padding: 0px;
+}
+.submenu__context {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 250px;
+  white-space: normal;
+  margin-left: 2rem;
+}
+
+.submenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 0;
+  background-color: transparent;
+}
+
+.submenu__logo {
+  width: 150px;
+}
+
+.submenu__desc {
+  display: inline;
+}
+
+.submenu__title {
+  font-size: 1.2rem;
+  padding: 0;
+  font-family: roboto;
+}
+
+.title__highlighter {
+  color: #3983fa;
+}
+
+.submenu:hover {
+  color: #3983fa;
+  background-color: transparent;
+}
+
+.submenu__list {
+  list-style: none;
+  padding: 1rem;
+}
+.submenu__listitem:hover {
+  color: #3983fa;
+}
+
+.submenu__listitem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1.75rem 0;
+  max-width: 400px;
+  padding: 0;
+}
+.submenu__listitemlogo {
+  margin-top: 0.25rem;
+}
+.submenu__listcontext {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 1rem;
+}
+.submenu__listcontext__title {
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: roboto;
+}
+.submenu__listcontext__desc {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.submenu__listitem_btn {
+  width: 100%;
+  background-color: #e44747;
+  height: 50px;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
