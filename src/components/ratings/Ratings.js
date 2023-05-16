@@ -11,7 +11,11 @@ const Ratings = () => {
       <Typography
         variant="h4"
         component="h2"
-        sx={{ textAlign: "center", marginBottom: "2rem" }}
+        sx={{
+          textAlign: "center",
+          marginBottom: "2rem",
+          fontFamily: "Sofia Sans",
+        }}
       >
         What people say about us
       </Typography>

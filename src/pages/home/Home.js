@@ -7,6 +7,7 @@ import Banner from "../../components/banner/Banner";
 import Ratings from "../../components/ratings/Ratings";
 import FooterBanner from "../../components/footer-banner/FooterBanner";
 import ChooseTemplate from "../../components/choosetemplate/ChooseTemplate";
+import Footer from "../../components/footer/Footer";
 const Home = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Home = () => {
       <ChooseTemplate />
       <Ratings />
       <FooterBanner />
+      <Footer />
     </div>
   );
 };

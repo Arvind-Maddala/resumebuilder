@@ -14,9 +14,19 @@ import { useState } from "react";
 import { pages } from "../../data/Data";
 import "./navbar.css";
 import toolsLogo from "../../assets/tools icon.png";
+import careerlogo from "../../assets/careerblog.png";
+import coverlogo from "../../assets/cover letter.png";
+
 import AssignmentTurnedInOutlinedIcon from "@mui/icons-material/AssignmentTurnedInOutlined";
 import NoteAltOutlinedIcon from "@mui/icons-material/NoteAltOutlined";
 import DraftsOutlinedIcon from "@mui/icons-material/DraftsOutlined";
+import InfoIcon from "@mui/icons-material/Info";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
+import ContentPasteSearchOutlinedIcon from "@mui/icons-material/ContentPasteSearchOutlined";
+import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
+import MarkAsUnreadOutlinedIcon from "@mui/icons-material/MarkAsUnreadOutlined";
+import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined";
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -42,16 +52,26 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#3983fa", height: "80px", boxShadow: "none" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            sx={{
+              mr: 2,
+              display: {
+                xs: "none",
+                md: "flex",
+              },
+              fontFamily: "Sofia Sans",
+            }}
           >
-            LOGO
+            Getresume.io
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -91,12 +111,16 @@ const NavBar = () => {
             </Menu>
           </Box>
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              fontFamily: "Sofia Sans",
+            }}
           >
-            LOGO
+            Getresume.io
           </Typography>
           <Box
             sx={{
@@ -112,7 +136,13 @@ const NavBar = () => {
                 aria-owns={anchorEl ? "tools-menu" : undefined}
                 onMouseEnter={handleOpen}
                 onClick={handleOpen}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Sofia Sans",
+                  fontSize: "1rem",
+                }}
               >
                 Tools
               </Button>
@@ -207,7 +237,13 @@ const NavBar = () => {
                 aria-owns={resumeEL ? "resume-menu" : undefined}
                 onMouseEnter={(event) => setResumeEl(event.currentTarget)}
                 onClick={(event) => setResumeEl(event.currentTarget)}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Sofia Sans",
+                  fontSize: "1rem",
+                }}
               >
                 Resume
               </Button>
@@ -314,7 +350,13 @@ const NavBar = () => {
                 onClick={(event) => {
                   setCVEl(event.currentTarget);
                 }}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Sofia Sans",
+                  fontSize: "1rem",
+                }}
               >
                 CV
               </Button>
@@ -332,17 +374,14 @@ const NavBar = () => {
                     style={{ backgroundColor: "transparent" }}
                   >
                     <div className="submenu">
-                      <img className="submenu__logo" src={toolsLogo} />
+                      <img className="submenu__logo" src={coverlogo} />
                       <div className="submenu__context">
                         <span className="submenu__title">
                           {" "}
-                          <span className="title__highlighter">
-                            Resume
-                          </span>{" "}
-                          Builder
+                          <span className="title__highlighter">CV</span> Builder
                         </span>
                         <p className="submenu__desc">
-                          Create a resume in 5 minutes. Get the job you want.
+                          Create a CV in 5 minutes. Get the job you want.
                         </p>
                       </div>
                     </div>
@@ -362,7 +401,7 @@ const NavBar = () => {
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              Resume checker
+                              CV checker
                             </span>
                             <span className="submenu__listcontext__desc">
                               Get your resume checked and scored in one click
@@ -388,12 +427,20 @@ const NavBar = () => {
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              Cover Letter Builder
+                              CV Builder
                             </span>
                             <span className="submenu__listcontext__desc">
                               Write a cover letter than convinces employer
                               you're the best
                             </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="submenu__listitem_btncontainer">
+                            <button className="submenu__listitem_btn">
+                              {" "}
+                              CREATE A CV
+                            </button>
                           </div>
                         </li>
                       </ul>
@@ -413,7 +460,13 @@ const NavBar = () => {
                 onClick={(event) => {
                   setCoverEl(event.currentTarget);
                 }}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Sofia Sans",
+                  fontSize: "1rem",
+                }}
               >
                 Cover Letter
               </Button>
@@ -431,17 +484,18 @@ const NavBar = () => {
                     style={{ backgroundColor: "transparent" }}
                   >
                     <div className="submenu">
-                      <img className="submenu__logo" src={toolsLogo} />
+                      <img className="submenu__logo" src={coverlogo} />
                       <div className="submenu__context">
                         <span className="submenu__title">
                           {" "}
                           <span className="title__highlighter">
-                            Resume
+                            Cover Letter
                           </span>{" "}
                           Builder
                         </span>
                         <p className="submenu__desc">
-                          Create a resume in 5 minutes. Get the job you want.
+                          Create a cover letter in 5 minutes. Get the job you
+                          want.
                         </p>
                       </div>
                     </div>
@@ -457,27 +511,27 @@ const NavBar = () => {
                       <ul className="submenu__list">
                         <li className="submenu__listitem">
                           <div className="submenu__listitemlogo">
-                            <AssignmentTurnedInOutlinedIcon fontSize="medium" />
+                            <MarkAsUnreadOutlinedIcon fontSize="medium" />
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              Resume checker
+                              Cover Letter Templates
                             </span>
                             <span className="submenu__listcontext__desc">
-                              Get your resume checked and scored in one click
+                              Find the perfect cover letter template
                             </span>
                           </div>
                         </li>
                         <li className="submenu__listitem">
                           <div className="submenu__listitemlogo">
-                            <NoteAltOutlinedIcon fontSize="medium" />
+                            <MarkEmailReadOutlinedIcon fontSize="medium" />
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              CV Maker
+                              Cover Letter Format
                             </span>
                             <span className="submenu__listcontext__desc">
-                              Create a CV in 5 minutes, get the job you want.
+                              Pick the format for your situation
                             </span>
                           </div>
                         </li>
@@ -493,6 +547,14 @@ const NavBar = () => {
                               Write a cover letter than convinces employer
                               you're the best
                             </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="submenu__listitem_btncontainer">
+                            <button className="submenu__listitem_btn">
+                              {" "}
+                              CREATE A COVER LETTER NOW{" "}
+                            </button>
                           </div>
                         </li>
                       </ul>
@@ -512,7 +574,13 @@ const NavBar = () => {
                 onClick={(event) => {
                   setCareerEl(event.currentTarget);
                 }}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Sofia Sans",
+                  fontSize: "1rem",
+                }}
               >
                 Career Blog
               </Button>
@@ -530,17 +598,18 @@ const NavBar = () => {
                     style={{ backgroundColor: "transparent" }}
                   >
                     <div className="submenu">
-                      <img className="submenu__logo" src={toolsLogo} />
+                      <img className="submenu__logo" src={careerlogo} />
                       <div className="submenu__context">
                         <span className="submenu__title">
                           {" "}
                           <span className="title__highlighter">
-                            Resume
+                            See All
                           </span>{" "}
-                          Builder
+                          Posts
                         </span>
                         <p className="submenu__desc">
-                          Create a resume in 5 minutes. Get the job you want.
+                          Find out how you can get a new job or improve the one
+                          you have
                         </p>
                       </div>
                     </div>
@@ -556,41 +625,44 @@ const NavBar = () => {
                       <ul className="submenu__list">
                         <li className="submenu__listitem">
                           <div className="submenu__listitemlogo">
-                            <AssignmentTurnedInOutlinedIcon fontSize="medium" />
+                            <CampaignOutlinedIcon fontSize="medium" />
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              Resume checker
+                              Career Advice
                             </span>
                             <span className="submenu__listcontext__desc">
-                              Get your resume checked and scored in one click
+                              Improve your career with advance tips and
+                              strategies
                             </span>
                           </div>
                         </li>
                         <li className="submenu__listitem">
                           <div className="submenu__listitemlogo">
-                            <NoteAltOutlinedIcon fontSize="medium" />
+                            <ContentPasteSearchOutlinedIcon fontSize="medium" />
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              CV Maker
+                              Cover Letter Help
                             </span>
                             <span className="submenu__listcontext__desc">
-                              Create a CV in 5 minutes, get the job you want.
+                              Boost your changes of having your resume read with
+                              our help
                             </span>
                           </div>
                         </li>
+
                         <li className="submenu__listitem">
                           <div className="submenu__listitemlogo">
-                            <DraftsOutlinedIcon fontSize="medium" />
+                            <QuestionAnswerIcon fontSize="medium" />
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              Cover Letter Builder
+                              Frequently asked Questions
                             </span>
                             <span className="submenu__listcontext__desc">
-                              Write a cover letter than convinces employer
-                              you're the best
+                              Get answers to frequently answered questions about
+                              resumes and more.
                             </span>
                           </div>
                         </li>
@@ -607,7 +679,13 @@ const NavBar = () => {
                 aria-owns={aboutEl ? "about-menu" : undefined}
                 onMouseEnter={(event) => setAboutEl(event.currentTarget)}
                 onClick={(event) => setAboutEl(event.currentTarget)}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Sofia Sans",
+                  fontSize: "1rem",
+                }}
               >
                 About
               </Button>
@@ -625,17 +703,11 @@ const NavBar = () => {
                     style={{ backgroundColor: "transparent" }}
                   >
                     <div className="submenu">
-                      <img className="submenu__logo" src={toolsLogo} />
+                      <img className="submenu__logo" src={careerlogo} />
                       <div className="submenu__context">
-                        <span className="submenu__title">
-                          {" "}
-                          <span className="title__highlighter">
-                            Resume
-                          </span>{" "}
-                          Builder
-                        </span>
+                        <span className="submenu__title"> About</span>
                         <p className="submenu__desc">
-                          Create a resume in 5 minutes. Get the job you want.
+                          Find out more about us from our career experts
                         </p>
                       </div>
                     </div>
@@ -651,41 +723,15 @@ const NavBar = () => {
                       <ul className="submenu__list">
                         <li className="submenu__listitem">
                           <div className="submenu__listitemlogo">
-                            <AssignmentTurnedInOutlinedIcon fontSize="medium" />
+                            <InfoIcon fontSize="medium" />
                           </div>
                           <div className="submenu__listcontext">
                             <span className="submenu__listcontext__title">
-                              Resume checker
+                              Press Page
                             </span>
                             <span className="submenu__listcontext__desc">
-                              Get your resume checked and scored in one click
-                            </span>
-                          </div>
-                        </li>
-                        <li className="submenu__listitem">
-                          <div className="submenu__listitemlogo">
-                            <NoteAltOutlinedIcon fontSize="medium" />
-                          </div>
-                          <div className="submenu__listcontext">
-                            <span className="submenu__listcontext__title">
-                              CV Maker
-                            </span>
-                            <span className="submenu__listcontext__desc">
-                              Create a CV in 5 minutes, get the job you want.
-                            </span>
-                          </div>
-                        </li>
-                        <li className="submenu__listitem">
-                          <div className="submenu__listitemlogo">
-                            <DraftsOutlinedIcon fontSize="medium" />
-                          </div>
-                          <div className="submenu__listcontext">
-                            <span className="submenu__listcontext__title">
-                              Cover Letter Builder
-                            </span>
-                            <span className="submenu__listcontext__desc">
-                              Write a cover letter than convinces employer
-                              you're the best
+                              Read original data insights to boost your
+                              reportings
                             </span>
                           </div>
                         </li>

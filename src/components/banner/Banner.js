@@ -1,15 +1,23 @@
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import "./banner.css";
+import resumelogo from "../../assets/resume.svg";
 const Banner = () => {
   return (
-    <div className="home--banner">
-      <div className="banner"> </div>
-      <h2 className="banner--title">
-        Resume Builder {<br />}
-        Professional Resume & Cover Letter Tools For Any Job
-      </h2>
-      <button className="home--tryoutbtn"> TRY NOW</button>
-    </div>
+    <Container>
+      <div className="home--banner">
+        <div className="banner-context">
+          <div className="banner"> </div>
+          <h1 className="banner--title">
+            <span className="banner__highliter "> GetResume.io</span> {<br />}
+            Professional Resume & Cover Letter Tool
+          </h1>
+          <button className="home--tryoutbtn"> TRY NOW</button>
+        </div>
+        <div>
+          <img src={resumelogo} className="home__banner--logo" />
+        </div>
+      </div>
+    </Container>
   );
 };
 

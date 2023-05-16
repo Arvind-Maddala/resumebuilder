@@ -1,34 +1,35 @@
-.banner {
-  background-image: url("../../assets/jumbotron-768@1_25x.jpg");
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  position: relative;
-}
 .home--banner {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  height: 50vh;
 }
 .banner--title {
-  position: absolute;
-  top: 25%;
-  right: calc(50% - 400px);
-  text-align: center;
   font-size: 2rem;
-  line-height: 1.7;
-  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-family: "Sofia Sans", sans-serif;
 }
 .home--tryoutbtn {
-  position: absolute;
-  top: 60%;
-  right: calc(50% - 150px);
-  z-index: 999;
   background-color: #e44747;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border: none;
-  width: 300px;
-  height: 50px;
   font-size: 1.25rem;
   color: #fff;
   cursor: pointer;
+  padding: 0.8rem 3rem;
+}
+
+.banner-context {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.home__banner--logo {
+  width: 400px;
+}
+
+.banner__highliter {
+  font-size: 3.5rem;
 }

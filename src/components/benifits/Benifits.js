@@ -4,11 +4,15 @@ import { benifits } from "../../data/Data";
 
 const Benifits = () => {
   return (
-    <Container sx={{ justifyContent: "center", padding: "3rem" }}>
+    <Container sx={{ justifyContent: "center", padding: "2rem 0" }}>
       <Typography
         variant="h4"
         component="h2"
-        sx={{ textAlign: "center", marginBottom: "3rem" }}
+        sx={{
+          textAlign: "center",
+          marginBottom: "3rem",
+          fontFamily: "Sofia Sans",
+        }}
       >
         What are the benefits of our Resume Builder?
       </Typography>
@@ -35,8 +39,10 @@ const Benifits = () => {
                   }}
                 />
                 <Box component="div">
-                  <h3 style={{ fontFamily: "Roboto" }}> {benifit.title}</h3>
-                  <p style={{ maxWidth: "300px" }}>{benifit.context}</p>
+                  <h3 style={{ fontFamily: "Sofia Sans" }}> {benifit.title}</h3>
+                  <p style={{ maxWidth: "300px", margin: "0px" }}>
+                    {benifit.context}
+                  </p>
                 </Box>
               </Box>
             </Grid>
