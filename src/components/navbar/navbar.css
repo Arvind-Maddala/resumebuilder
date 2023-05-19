@@ -98,3 +98,7 @@
   padding: 1.25rem 0;
   cursor: pointer;
 }
+
+.MuiList-root.MuiMenu-list {
+  padding-bottom: 0px;
+}

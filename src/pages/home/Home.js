@@ -8,10 +8,10 @@ import Ratings from "../../components/ratings/Ratings";
 import FooterBanner from "../../components/footer-banner/FooterBanner";
 import ChooseTemplate from "../../components/choosetemplate/ChooseTemplate";
 import Footer from "../../components/footer/Footer";
-const Home = () => {
+const Home = ({ setMode, mode }) => {
   return (
     <div>
-      <NavBar />
+      <NavBar setMode={setMode} mode={mode} />
       <Banner />
       <Benifits />
       <ChooseTemplate />

@@ -7,7 +7,7 @@ import { ratingData } from "../../data/Data";
 
 const Ratings = () => {
   return (
-    <Container>
+    <Container sx={{ p: "2rem", justifyContent: "center" }}>
       <Typography
         variant="h4"
         component="h2"

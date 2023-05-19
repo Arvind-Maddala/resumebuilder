@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -7,8 +7,8 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <Container>
-      <div className="footer__container">
-        <div className="footer__list--container ">
+      <Stack direction="row" justifyContent="space-between">
+        <Box className="footer__list--container ">
           <h4> Resume</h4>
           <ul>
             <li>Resume Builder</li>
@@ -20,8 +20,8 @@ const Footer = () => {
             <li>Resume Help</li>
             <li>Best Resume templates</li>
           </ul>
-        </div>
-        <div>
+        </Box>
+        <Box className="footer__list--container ">
           <h4> CV </h4>
           <ul>
             <li>CV Builder</li>
@@ -32,8 +32,8 @@ const Footer = () => {
 
             <li>CV Help</li>
           </ul>
-        </div>
-        <div>
+        </Box>
+        <Box className="footer__list--container ">
           <h4> Cover Letter </h4>
           <ul>
             <li>Cover Letter Builder</li>
@@ -44,8 +44,8 @@ const Footer = () => {
 
             <li>Cover Letter Help</li>
           </ul>
-        </div>
-        <div>
+        </Box>
+        <Box className="footer__list--container ">
           <h4> Support</h4>
           <ul>
             <li>About</li>
@@ -57,9 +57,9 @@ const Footer = () => {
             <li>Terms of service</li>
             <li>Cookies & Tracking Policy</li>
           </ul>
-        </div>
-      </div>
-      <div className="footer__links">
+        </Box>
+      </Stack>
+      <Stack direction="row" justifyContent="space-between">
         <div className="footer__sociallinks">
           <ul>
             <li>
@@ -86,7 +86,7 @@ const Footer = () => {
             </a>
           </p>
         </div>
-      </div>
+      </Stack>
     </Container>
   );
 };

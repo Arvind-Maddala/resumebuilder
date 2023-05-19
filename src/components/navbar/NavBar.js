@@ -2,6 +2,7 @@ import {
   AppBar,
   Box,
   Button,
+  Checkbox,
   Container,
   IconButton,
   Menu,
@@ -27,8 +28,9 @@ import ContentPasteSearchOutlinedIcon from "@mui/icons-material/ContentPasteSear
 import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import MarkAsUnreadOutlinedIcon from "@mui/icons-material/MarkAsUnreadOutlined";
 import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined";
+import { Brightness4, DarkMode } from "@mui/icons-material";
 
-const NavBar = () => {
+const NavBar = ({ setMode, mode }) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [resumeEL, setResumeEl] = useState(null);
@@ -51,11 +53,12 @@ const NavBar = () => {
     setAnchorEl(null);
   };
 
+  const handleTheme = () => {
+    setMode((prevState) => (prevState === "light" ? "dark" : "light"));
+  };
+
   return (
-    <AppBar
-      position="static"
-      sx={{ backgroundColor: "#3983fa", height: "80px", boxShadow: "none" }}
-    >
+    <AppBar position="static" sx={{ height: "80px", boxShadow: "none" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -179,7 +182,6 @@ const NavBar = () => {
                     <MenuItem
                       onClick={handleClose}
                       style={{
-                        backgroundColor: "#F1F8FE",
                         whiteSpace: "normal",
                       }}
                     >
@@ -280,7 +282,6 @@ const NavBar = () => {
                     <MenuItem
                       onClick={handleClose}
                       style={{
-                        backgroundColor: "#F1F8FE",
                         whiteSpace: "normal",
                       }}
                     >
@@ -390,7 +391,6 @@ const NavBar = () => {
                     <MenuItem
                       onClick={handleClose}
                       style={{
-                        backgroundColor: "#F1F8FE",
                         whiteSpace: "normal",
                       }}
                     >
@@ -504,7 +504,6 @@ const NavBar = () => {
                     <MenuItem
                       onClick={handleClose}
                       style={{
-                        backgroundColor: "#F1F8FE",
                         whiteSpace: "normal",
                       }}
                     >
@@ -618,7 +617,6 @@ const NavBar = () => {
                     <MenuItem
                       onClick={handleClose}
                       style={{
-                        backgroundColor: "#F1F8FE",
                         whiteSpace: "normal",
                       }}
                     >
@@ -716,7 +714,6 @@ const NavBar = () => {
                     <MenuItem
                       onClick={handleClose}
                       style={{
-                        backgroundColor: "#F1F8FE",
                         whiteSpace: "normal",
                       }}
                     >
@@ -742,10 +739,12 @@ const NavBar = () => {
               </Menu>
             </div>
 
-            <Button sx={{ mx: 10, my: 2, color: "white", display: "block" }}>
-              {" "}
-              MY ACCOUNT{" "}
-            </Button>
+            <Checkbox
+              icon={<DarkMode />}
+              checkedIcon={<Brightness4 />}
+              sx={{ width: "75px" }}
+              onChange={handleTheme}
+            />
           </Box>
         </Toolbar>
       </Container>

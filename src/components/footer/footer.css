@@ -1,9 +1,4 @@
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
-.footer__container h4 {
+.footer__list--container h4 {
   font-family: "Sofia Sans";
   font-size: 1.15rem;
 }
@@ -15,16 +10,16 @@
   justify-content: flex-start;
 }
 
-.footer__container ul > li {
+.footer__list--container ul > li {
   list-style: none;
   margin-top: 0.5rem;
 }
 
-.footer__container ul li:hover {
+.footer__list--container ul li:hover {
   color: #3983fa;
   cursor: pointer;
 }
-.footer__container ul {
+.footer__list--container ul {
   padding: 0;
 }
 

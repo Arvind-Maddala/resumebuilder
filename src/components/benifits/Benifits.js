@@ -4,7 +4,7 @@ import { benifits } from "../../data/Data";
 
 const Benifits = () => {
   return (
-    <Container sx={{ justifyContent: "center", padding: "2rem 0" }}>
+    <Container sx={{ justifyContent: "center", padding: "2rem 0", mb: "2rem" }}>
       <Typography
         variant="h4"
         component="h2"
