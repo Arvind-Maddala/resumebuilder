@@ -8,14 +8,21 @@ function App() {
   const darkTheme = createTheme({
     palette: {
       mode: mode,
+      customBackground: {
+        main: "#F1F8FE",
+      },
     },
   });
+  console.log(mode);
   return (
-    <ThemeProvider theme={darkTheme} mode={mode}>
+    <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home setMode={setMode} />}></Route>
+          <Route
+            path="/"
+            element={<Home setMode={setMode} mode={mode} />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

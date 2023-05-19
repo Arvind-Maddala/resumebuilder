@@ -2,22 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0;
-  height: 50vh;
+  /* height: 60vh; */
+  padding: 2rem 0 3rem 0;
 }
 .banner--title {
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: 2.5rem;
+  line-height: 1.7;
   font-family: "Sofia Sans", sans-serif;
-}
-.home--tryoutbtn {
-  background-color: #e44747;
-  border-radius: 0.5rem;
-  border: none;
-  font-size: 1.25rem;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.8rem 3rem;
 }
 
 .banner-context {
@@ -32,4 +23,8 @@
 
 .banner__highliter {
   font-size: 3.5rem;
+}
+
+.banner__texthighlighter {
+  color: #3983fa;
 }
